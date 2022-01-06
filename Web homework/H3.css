@@ -1,0 +1,13 @@
+﻿table, td, th {
+    border: 3px solid rgba(141,184,124,1);
+    border-collapse: collapse;
+    font-family: Consolas, 微軟正黑體;
+}
+
+th {
+    background-color: lightgray; /* grey = gray */
+}
+
+.IndianRed {
+    color: rgb(205, 92, 92);
+}

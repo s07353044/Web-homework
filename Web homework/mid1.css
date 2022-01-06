@@ -1,0 +1,5 @@
+﻿table, td, th {
+    border: 1px solid;
+    border-collapse: collapse;
+    font-family: Consolas, 微軟正黑體;
+}

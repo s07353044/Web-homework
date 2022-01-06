@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="box">
+        <input type="button" id="btn" value="+">
+        <input type="text" id="num" value="1">
+        <input type="button" id="btn2" value="-">
+    </div>
+    <script>
+
+
+        var sum = 0;
+
+        document.getElementById("btn").onclick = function () {
+
+            sum += 1;
+
+            document.getElementById("num").value = sum;
+
+        }
+
+        document.getElementById("btn2").onclick = function () {
+
+            sum -= 1;
+
+            document.getElementById("num").value = sum
+            if (document.getElementById("num").value <= 0) {
+                alert("已無法再減少數量!!");
+            }
+        }
+       
+
+    </script>
+
+</body>
+</html>

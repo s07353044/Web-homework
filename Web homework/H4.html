@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>個人簡歷</title>
+    <link rel="stylesheet" href="H3.css" />
+</head>
+<body>
+    <h1 id="myName">
+        姓名:謝旻勳 S07353044
+    </h1>
+    <h2>
+        興趣
+    </h2>
+    <ol>
+        <li>撸狗</li>
+        <li>聽音樂</li>
+        <li>追美劇</li>
+    </ol>
+    <h2>
+        簡歷
+    </h2>
+    <p>
+        最有成就感的事:
+        <ol>
+            <li><em style="color: red; text-decoration: overline">與同學一起完成畢業專題</em></li>
+        </ol>
+        人生中最棒的經歷:
+        <ol>
+            <li>學會游泳</li>
+            <li>學會開車</li>
+            <li>接生小狗</li>
+        </ol>
+    </p>
+    <h2>未來目標</h2>
+    <table id="myTable">
+        <tr>
+            <th>學科名稱</th>
+            <th>內容</th>
+            <th>學科名稱</th>
+            <th>內容</th>
+        </tr>
+        <tr>
+            <td>Python爬蟲實戰</td>
+            <td>反爬蟲</td>
+            <td>俄文</td>
+            <td>俄羅斯語</td>
+        </tr>
+        <tr>
+            <td>Unity</td>
+            <td>實作遊戲</td>
+            <td>Painter 電繪</td>
+            <td>筆刷運用</td>
+        </tr>
+    </table>
+    <div class="mySkill" style="display:none;">
+        <h2>技能</h2>
+        <ul>
+            <li>Python爬蟲</li>
+            <li>Machine Learning</li>
+            <li>C++ 程式設計</li>
+        </ul>
+    </div>
+    <p>
+        <button id="switchColor" type="button">用class切換顏色</button>
+        <button id="switchDiv" type="button">顯示/隱藏Div</button>
+        <button id="showDiv" type="button">顯示Div</button>
+        <button id="removeDiv" type="button">移除Div</button>
+    </p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('#switchColor').click(function () {
+            $("#myName").toggleClass("IndianRed");
+        });
+        $('#switchDiv').click(function () {
+            $('.mySkill').toggle();
+        });
+        $('#showDiv').click(function () {
+            let mySkill = ["Python爬蟲", "Machine Learning", "C++程式語言"];
+            let mySkillStr = "<div class=\"mySkill\"><h2>技能</h2><ul>";
+            for (let s of mySkill) {
+                mySkillStr += "<li>" + s + "<li>";
+            }
+            mySkillStr += "</ul></div>";
+            $(mySkillStr).insertAfter("#myTable");
+        });
+        $('#removeDiv').click(function () {
+            $("#myTable ~ .mySkill:first").remove();
+        });
+
+    });
+</script>
+</body>
+</html>
